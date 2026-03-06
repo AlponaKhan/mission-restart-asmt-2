@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1001,
+    "title": "Unable to login to account",
+    "description": "Customer cannot log in even after resetting the password.",
+    "customer": "Sarah Ahmed",
+    "priority": "High priority",
+    "status": "Open",
+    "createdAt": "1/15/2026"
+  },
+  {
+    "id": 1002,
+    "title": "Payment not reflected",
+    "description": "Customer completed payment but it is not visible in the order history.",
+    "customer": "Rahim Uddin",
+    "priority": "High priority",
+    "status": "In Progress",
+    "createdAt": "1/16/2026"
+  },
+  {
+    "id": 1003,
+    "title": "Website loading slowly",
+    "description": "Customer reports the website loads very slowly on mobile devices.",
+    "customer": "Nusrat Jahan",
+    "priority": "Medium priority",
+    "status": "Open",
+    "createdAt": "1/18/2026"
+  },
+  {
+    "id": 1004,
+    "title": "Incorrect product delivered",
+    "description": "Customer received the wrong product for their recent order.",
+    "customer": "Tanvir Hasan",
+    "priority": "High priority",
+    "status": "Resolved",
+    "createdAt": "1/20/2026"
+  },
+  {
+    "id": 1005,
+    "title": "Refund request for damaged item",
+    "description": "Customer wants a refund because the product arrived damaged.",
+    "customer": "Farhana Kabir",
+    "priority": "Medium priority",
+    "status": "Pending",
+    "createdAt": "1/22/2026"
+  },
+  {
+    "id": 1006,
+    "title": "Unable to update profile",
+    "description": "Customer cannot save changes after editing their profile.",
+    "customer": "Arif Hossain",
+    "priority": "Low priority",
+    "status": "Open",
+    "createdAt": "1/24/2026"
+  },
+  {
+    "id": 1007,
+    "title": "Email notifications not received",
+    "description": "Customer reports that order confirmation emails are not arriving.",
+    "customer": "Mariam Akter",
+    "priority": "Medium priority",
+    "status": "In Progress",
+    "createdAt": "1/25/2026"
+  },
+  {
+    "id": 1008,
+    "title": "App crashes during checkout",
+    "description": "Mobile application crashes when the customer tries to place an order.",
+    "customer": "Sabbir Ahmed",
+    "priority": "High priority",
+    "status": "Open",
+    "createdAt": "1/27/2026"
+  },
+  {
+    "id": 1009,
+    "title": "Discount code not applying",
+    "description": "Customer cannot apply a promotional discount code at checkout.",
+    "customer": "Lamia Rahman",
+    "priority": "Low priority",
+    "status": "Pending",
+    "createdAt": "1/29/2026"
+  },
+  {
+    "id": 1010,
+    "title": "Order tracking not updating",
+    "description": "Customer cannot see the latest shipping status for their order.",
+    "customer": "Mehedi Hasan",
+    "priority": "Medium priority",
+    "status": "In Progress",
+    "createdAt": "1/30/2026"
+  }
+]
