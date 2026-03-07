@@ -25,7 +25,7 @@ function App() {
       </div>}>
         <Main customerPromise={customerPromise}></Main>
       </Suspense>
-      {/* <Footer></Footer> */}
+      <Footer></Footer>
     </>
   )
 }
