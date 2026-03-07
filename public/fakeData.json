@@ -32,7 +32,7 @@
     "description": "Customer received the wrong product for their recent order.",
     "customer": "Tanvir Hasan",
     "priority": "High priority",
-    "status": "Resolved",
+    "status": "In Progress",
     "createdAt": "1/20/2026"
   },
   {
@@ -41,7 +41,7 @@
     "description": "Customer wants a refund because the product arrived damaged.",
     "customer": "Farhana Kabir",
     "priority": "Medium priority",
-    "status": "Pending",
+    "status": "open",
     "createdAt": "1/22/2026"
   },
   {
@@ -77,7 +77,7 @@
     "description": "Customer cannot apply a promotional discount code at checkout.",
     "customer": "Lamia Rahman",
     "priority": "Low priority",
-    "status": "Pending",
+    "status": "Open",
     "createdAt": "1/29/2026"
   },
   {
