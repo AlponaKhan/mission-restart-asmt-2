@@ -1,4 +1,4 @@
-import { Suspense, useState } from 'react'
+import { Suspense, use, useState } from 'react'
 import './App.css'
 import Bannar from './components/Bannar'
 import Footer from './components/Footer'
@@ -12,40 +12,59 @@ const customerPromise = fetch('./fakeData.json')
 // console.log(customerPromise);
 
 function App() {
-     const [progress, setProgress] = useState(0);
-     const [titled, setTitle] =useState([]);
-     const [resolved, setResolved]= useState([]);
-     const [solvedCount, setSolvedCount] = useState(0);
 
-    const handleCompletedTask =(title)=>{
+  const data = use(customerPromise);
+  // console.log(data);
 
-      toast(`Task: ${title}.title Completed!!!`);
+  const [cards, setCards]= useState(data);
 
-      const newResolved = [...resolved, title];
-        setResolved(newResolved);
+  const [progress, setProgress] = useState(0);
 
-        const updatedProgress = progress - 1;
-        setProgress(updatedProgress);
+  const [titled, setTitle] = useState([]);
 
-        const updatedSolved = solvedCount + 1;
-        setSolvedCount(updatedSolved);
-    }
+  const [resolved, setResolved] = useState([]);
+  const [solvedCount, setSolvedCount] = useState(0);
 
-    const handleCardClick = (singleCard) => {
-        const updatedProgress = progress + 1;
-        setProgress(updatedProgress);
+  const removeTask = (task) => {
+    // console.log('task remove', task);
+    const filteredData = titled.filter(heading => heading !== task);
+    setTitle(filteredData);
 
-        const selectedTitle = singleCard.title;
+    const filteredCard = cards.filter(card=> card.title !== task);
+    setCards(filteredCard);
+  }
 
-        const newTitle = [...titled, selectedTitle];
-        setTitle(newTitle);
+  const handleCompletedTask = (title) => {
+    // console.log(title);
 
-        toast(`Task In progress!!!`);
-    }
+
+    toast(`Task: ${title}.title Completed!!!`);
+
+    const newResolved = [...resolved, title];
+    setResolved(newResolved);
+
+    const updatedProgress = progress - 1;
+    setProgress(updatedProgress);
+
+    const updatedSolved = solvedCount + 1;
+    setSolvedCount(updatedSolved);
+  }
+
+  const handleCardClick = (singleCard) => {
+    const updatedProgress = progress + 1;
+    setProgress(updatedProgress);
+
+    const selectedTitle = singleCard.title;
+
+    const newTitle = [...titled, selectedTitle];
+    setTitle(newTitle);
+
+    toast(`Task In progress!!!`);
+  }
 
   return (
 
-    
+
     <>
       <Navbar></Navbar>
       <Bannar solvedCount={solvedCount} progress={progress}></Bannar>
@@ -56,7 +75,7 @@ function App() {
         <span className="loading loading-dots loading-lg"></span>
         <span className="loading loading-dots loading-xl"></span>
       </div>}>
-        <Main resolved={resolved} handleCompletedTask={handleCompletedTask} titled={titled} handleCardClick={handleCardClick} customerPromise={customerPromise}></Main>
+        <Main cards={cards} removeTask={removeTask} resolved={resolved} handleCompletedTask={handleCompletedTask} titled={titled} handleCardClick={handleCardClick} data={data}></Main>
       </Suspense>
       <Footer></Footer>
       <ToastContainer />
