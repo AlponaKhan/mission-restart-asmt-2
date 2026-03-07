@@ -17,7 +17,7 @@ const Main = ({cards,removeTask, data, handleCardClick, handleCompletedTask, res
                 </div>
                 <div className='md:col-span-1'>
                     <div>
-                        <h2 className='font-semibold text-2xl pb-2'>Task Status</h2>
+                        <h2 className='font-semibold text-2xl pb-2 pt-5'>Task Status</h2>
                         <TaskStatus removeTask={removeTask} handleCompletedTask={handleCompletedTask} data={data} titled={titled}></TaskStatus>
                     </div>
                     <div>
