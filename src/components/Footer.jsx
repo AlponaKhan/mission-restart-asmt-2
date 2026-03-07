@@ -10,55 +10,55 @@ const Footer = () => {
                 </div>
                 {/* company */}
                 <div>
-                    <h6 class="text-xl font-medium text-white pb-4">Company</h6>
+                    <h6 className="text-xl font-medium text-white pb-4">Company</h6>
                     <ul>
-                        <li className='pb-4'><a class=" text-gray-400 ">About Us</a></li>
-                        <li className='pb-4'><a class=" text-gray-400">Our Mission</a></li>
-                        <li><a class=" text-gray-400">Contact Sales</a></li>
+                        <li className='pb-4'><a className=" text-gray-400 ">About Us</a></li>
+                        <li className='pb-4'><a className=" text-gray-400">Our Mission</a></li>
+                        <li><a className=" text-gray-400">Contact Sales</a></li>
                     </ul>
                 </div>
                 {/* services */}
                 <div>
-                    <h6 class="text-xl font-medium text-white pb-4">Services</h6>
+                    <h6 className="text-xl font-medium text-white pb-4">Services</h6>
                     <ul>
-                        <li className='pb-4'><a class=" text-gray-400">Products & Services</a></li>
-                        <li className='pb-4'><a class=" text-gray-400">Customer Stories</a></li>
-                        <li><a class=" text-gray-400">Download Apps</a></li>
+                        <li className='pb-4'><a className=" text-gray-400">Products & Services</a></li>
+                        <li className='pb-4'><a className=" text-gray-400">Customer Stories</a></li>
+                        <li><a className=" text-gray-400">Download Apps</a></li>
                     </ul>
                 </div>
                  {/* information */}
                 <div>
-                    <h6 class="text-xl font-medium text-white pb-4">Information</h6>
+                    <h6 className="text-xl font-medium text-white pb-4">Information</h6>
                     <ul>
-                        <li className='pb-4'><a class=" text-gray-400">Privacy Policy</a></li>
-                        <li className='pb-4'><a class=" text-gray-400">Terms & Conditions</a></li>
-                        <li><a class=" text-gray-400">Join Us</a></li>
+                        <li className='pb-4'><a className=" text-gray-400">Privacy Policy</a></li>
+                        <li className='pb-4'><a className=" text-gray-400">Terms & Conditions</a></li>
+                        <li><a className=" text-gray-400">Join Us</a></li>
                     </ul>
                 </div>
                  {/* social links */}
                 <div>
-                    <h6 class="text-xl font-medium text-white pb-4">Social Links</h6>
-                    <a class=" flex gap-1 pb-4">
+                    <h6 className="text-xl font-medium text-white pb-4">Social Links</h6>
+                    <a className=" flex gap-1 pb-4">
                         <div className='bg-white rounded-full flex items-center justify-center w-4 h-4'>
-                            <i class="fa-brands fa-x-twitter fa-2xs text-black"></i>
+                            <i className="fa-brands fa-x-twitter fa-2xs text-black"></i>
                         </div>
                         <p className='text-gray-400'>@CS — Ticket System</p>
                     </a>
-                    <a class="flex gap-1 pb-4">
+                    <a className="flex gap-1 pb-4">
                         <div className='bg-white rounded-full flex items-center justify-center w-4 h-4'>
-                            <i class="fa-brands fa-linkedin-in fa-2xs text-black"></i>
+                            <i className="fa-brands fa-linkedin-in fa-2xs text-black"></i>
                         </div>
                         <p className='text-gray-400'>@CS — Ticket System</p>
                     </a>
-                    <a class="flex gap-1 pb-4">
+                    <a className="flex gap-1 pb-4">
                         <div className='bg-white rounded-full flex items-center justify-center w-4 h-4'>
-                            <i class="fa-brands fa-facebook-f fa-2xs text-black"></i>
+                            <i className="fa-brands fa-facebook-f fa-2xs text-black"></i>
                         </div>
                         <p className='text-gray-400'>@CS — Ticket System</p>
                     </a>
-                    <a class="flex gap-1">
+                    <a className="flex gap-1">
                         <div className='bg-white rounded-full flex items-center justify-center w-4 h-4'>
-                            <i class="fa-solid fa-envelope fa-2xs text-black"></i>
+                            <i className="fa-solid fa-envelope fa-2xs text-black"></i>
                         </div>
                         <p className='text-gray-400'>support@cst.com</p>
                     </a>

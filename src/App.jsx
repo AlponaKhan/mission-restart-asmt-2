@@ -1,9 +1,10 @@
-import { Suspense } from 'react'
+import { Suspense, useState } from 'react'
 import './App.css'
 import Bannar from './components/Bannar'
 import Footer from './components/Footer'
 import Main from './components/mainSection/Main'
 import Navbar from './components/Navbar'
+import { ToastContainer, toast } from 'react-toastify';
 
 
 const customerPromise = fetch('./fakeData.json')
@@ -11,21 +12,54 @@ const customerPromise = fetch('./fakeData.json')
 // console.log(customerPromise);
 
 function App() {
+     const [progress, setProgress] = useState(0);
+     const [titled, setTitle] =useState([]);
+     const [resolved, setResolved]= useState([]);
+     const [solvedCount, setSolvedCount] = useState(0);
+
+    const handleCompletedTask =(title)=>{
+
+      toast(`Task: ${title}.title Completed!!!`);
+
+      const newResolved = [...resolved, title];
+        setResolved(newResolved);
+
+        const updatedProgress = progress - 1;
+        setProgress(updatedProgress);
+
+        const updatedSolved = solvedCount + 1;
+        setSolvedCount(updatedSolved);
+    }
+
+    const handleCardClick = (singleCard) => {
+        const updatedProgress = progress + 1;
+        setProgress(updatedProgress);
+
+        const selectedTitle = singleCard.title;
+
+        const newTitle = [...titled, selectedTitle];
+        setTitle(newTitle);
+
+        toast(`Task In progress!!!`);
+    }
 
   return (
+
+    
     <>
       <Navbar></Navbar>
-      <Bannar></Bannar>
+      <Bannar solvedCount={solvedCount} progress={progress}></Bannar>
       <Suspense fallback={<div>
-        <span class="loading loading-dots loading-xs"></span>
-        <span class="loading loading-dots loading-sm"></span>
-        <span class="loading loading-dots loading-md"></span>
-        <span class="loading loading-dots loading-lg"></span>
-        <span class="loading loading-dots loading-xl"></span>
+        <span className="loading loading-dots loading-xs"></span>
+        <span className="loading loading-dots loading-sm"></span>
+        <span className="loading loading-dots loading-md"></span>
+        <span className="loading loading-dots loading-lg"></span>
+        <span className="loading loading-dots loading-xl"></span>
       </div>}>
-        <Main customerPromise={customerPromise}></Main>
+        <Main resolved={resolved} handleCompletedTask={handleCompletedTask} titled={titled} handleCardClick={handleCardClick} customerPromise={customerPromise}></Main>
       </Suspense>
       <Footer></Footer>
+      <ToastContainer />
     </>
   )
 }
